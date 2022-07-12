@@ -11,10 +11,6 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	width: 90%;
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
-	flex-flow: row wrap;
 }
 
 h1,
@@ -162,16 +158,60 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 
 footer {
-	border-top: 3px solid #eee;
 	text-align: center;
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
-	flex-flow: row wrap;
+	margin: 0 auto;
+	border-top: 3px solid #eee;
+	clear: both;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+	.section-one, .section-two, .section-three {
+		width: 33%;
+		float: left;
+	}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	.section-one h3, .section-two h3,
+	.section-three h3 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.menu, .reviews, .address {
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+		font-size: 0.775em;
+		padding: 0 1.5em;
+	}
+}
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+	.container {
+		width: 100%;
+	}
+	header h1 {
+		border-bottom: none;
+		text-align: left;
+		float: left;
+	}
+	header nav {
+		width: 50%;
+		float: right;
+		text-align: right;
+		padding: 2.5em 0;
+	}
+	header nav ul li {
+		display: inline;
+	}
 }
