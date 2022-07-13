@@ -175,10 +175,14 @@ footer span {
 
 @media all and (min-width:768px) {
     /* Tablet styles here */
+
+	.bottom-section {
+		display:flex;
+		flex-flow: row wrap;
+	}
 	.section-one, .section-two, .section-three {
 		width: 33%;
 		height: auto;
-		float: left;
 	}
 	.section-two {
 		border-left: 1px solid #eee;
@@ -200,15 +204,14 @@ footer span {
 		width: 100%;
 	}
 	header {
-		display: inline;
+		display: flex;
+		flex-flow: row wrap;
 	}
 	header h1 {
 		border-bottom: none;
-		float: left;
 	}
 	header nav {
 		width: 50%;
-		float: right;
 		padding: 2.5em 0;
 	}
 	header nav ul li {
